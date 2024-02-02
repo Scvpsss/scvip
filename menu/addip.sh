@@ -108,8 +108,8 @@ clear
 setadmin() {
 #isi link git
 linkinstall="https://raw.githubusercontent.com/Scvpsss/izin/main"
-rm -rf /etc/tarap/
-mkdir -p /etc/tarap
+rm -rf /etc/izin/
+mkdir -p /etc/izin
 read -p "Masukan Token Code Github Anda : " ans
 echo -e "$ans" >> /etc/tarap/access.conf
 wget -O /usr/bin/vps ${linkinstall}/vps && chmod +x /usr/bin/vps
@@ -137,7 +137,7 @@ rm -rf /root/allow
 read -p "IP VPS      : " daftar
 echo -e "[ ${Lyellow}INFO${NC} ] Checking the IPVPS if Already Registered"
 sleep 1
-cek=$( curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | awk '{print $5}' | grep $daftar )
+cek=$( curl -sS https://raw.githubusercontent.com/Scvpsss/izin/main/ip | awk '{print $5}' | grep $daftar )
 if [[ $daftar = $cek ]]; then
 echo -e "\e[1;31m The IP VPS Has Been Registered\e[0m"
 sleep 2
@@ -177,7 +177,7 @@ mkdir /root/vps
 cd /root/vps/
 rm -rf .git
 git init
-touch ipvps
+touch ip
 echo "$daftarip" >> /root/ipvps/vps
 echo -e "Client IP VPS Add Successfully"
 git init >/dev/null 2>&1
@@ -185,7 +185,7 @@ git add .
 git commit -m register
 git branch -M main
 git remote add origin https://github.com/Scvpsss/izin.git
-git push -f https://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@github.com/Scvpsss/izin.git
+git push -f https://${tokengit}@github.com/Scvpsss/izin.git
 echo -e "IPVPS Registration Completed"
 sleep 1
 links1="apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot"
@@ -239,14 +239,14 @@ clear
 rm -rf /root/vps
 rm -rf /root/data
 rm -rf /root/vps
-git config --global user.email "lailafauziyah00@gmail.com"
-git config --global user.name "kuhing"
-git clone https://github.com/kuhing/ip.git
+git config --global user.email "sandiprayoga6666444@gmail.com"
+git config --global user.name "Scvpsss"
+git clone https://github.com/Scvpsss/izin.git
 mkdir /root/vps
 cd /root/vps/
 rm -rf .git
 git init
-touch ipvps
+touch ip
 echo -e "[ ${Lyellow}INFO${NC} ] Checking list.."
 clear
 echo -e "\033[0;34m------------------------------------------\033[0m"
@@ -266,8 +266,8 @@ git init >/dev/null 2>&1
 git add .
 git commit -m delete
 git branch -M main
-git remote add origin https://github.com/jambanbkn/ipvps.git
-git push -f https://${tokengit}@github.com/jambanbkn/ipvps.git
+git remote add origin https://github.com/Scvpsss/izin.git
+git push -f https://${tokengit}@github.com/Scvpsss/izin.git
 clear
 echo -e "\033[0;34m------------------------------------------\033[0m"
 echo -e "\E[44;1;39m      Client IP Deleted Successfully      \E[0m"
@@ -292,15 +292,15 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
-git config --global user.email "almonika.cindy@outlook.com"
-git config --global user.name "DryanZ"
-git clone https://github.com/DryanZ/allow.git
-  mkdir /root/allow
-  cd /root/allow/
+rm -rf /root/izin
+git config --global user.email "sandiprayoga6666444@gmail.com"
+git config --global user.name "Scvpsss"
+git clone https://github.com/Scvpsss/izin.git
+  mkdir /root/izin
+  cd /root/izin/
   rm -rf .git
 git init
-  touch ipvps.conf
+  touch ip
 echo -e "[ ${Lyellow}INFO${NC} ] Checking list.."
 clear
 echo -e "\033[0;34m------------------------------------------\033[0m"
