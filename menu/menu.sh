@@ -285,6 +285,8 @@ echo -e "  ${z}│ [${r}03${NC}] ${z}VLESS  MENU  ${NC}       ""[${r}09${NC}] ${
 echo -e "  ${z}│ [${r}04${NC}] ${z}TROJAN MENU  ${NC}       ""[${r}10${NC}] ${z}INSTALL UDP        ${NC}"
 echo -e "  ${z}│ [${r}05${NC}] ${z}SETING MENU  ${NC}       ""[${r}11${NC}] ${z}ADD DOMAIN         ${NC}"        
 echo -e "  ${z}│ [${r}06${NC}] ${z}UPDATE SCRIPT${NC}       ""[${r}12${NC}] ${z}KELUAR SCRIPT      ${NC}"
+
+echo -e "  ${z}│ [${r}13${NC}] ${z}ADD IP VPS ${NC}
 echo -e "  ${z}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
 echo -e "${z}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}" 
 echo -e "${z}│${IWhite}HARI ini =${NC}${r} $ttoday${NC} ${IWhite}KEMARIN =${NC}${r} $tyest${NC} ${IWhite}BULAN =${NC}${r} $tmon${NC}"
@@ -310,4 +312,5 @@ case $opt in
 10) clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 11) clear ; add-host ;; 
 12) exit ;;
+13) clear ; addip ;;
 esac
