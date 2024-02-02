@@ -169,16 +169,16 @@ add-ip
 fi
 
 daftarip=$(cat /root/data)
-rm -rf /root/vps
+rm -rf /root/izin
 git config --global user.email "sandiprayoga6666444@gmail.com"
 git config --global user.name "Scvpsss"
 git clone https://github.com/Scvpsss/izin.git
-mkdir /root/vps
-cd /root/vps/
+mkdir /root/izin
+cd /root/izin/
 rm -rf .git
 git init
 touch ip
-echo "$daftarip" >> /root/ipvps/vps
+echo "$daftarip" >> /root/izin/ip
 echo -e "Client IP VPS Add Successfully"
 git init >/dev/null 2>&1
 git add .
@@ -220,9 +220,9 @@ echo -e "\033[0;34m------------------------------------------\033[0m"
 echo "  Siapkan Email Cloudflare Untuk Cert Xray  "
 echo "  Pastikan Domain Dah Siap Pointing Di Cloudflare Sebelum Install  "
 echo -e "\033[0;34m------------------------------------------\033[0m"
-rm -rf /root/vps
+rm -rf /root/izin
 rm -rf /root/data
-rm -rf /root/vps
+rm -rf /root/ip
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu-addip"
 addip
@@ -236,14 +236,14 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/vps
+rm -rf /root/izin
 rm -rf /root/data
-rm -rf /root/vps
+rm -rf /root/ip
 git config --global user.email "sandiprayoga6666444@gmail.com"
 git config --global user.name "Scvpsss"
 git clone https://github.com/Scvpsss/izin.git
-mkdir /root/vps
-cd /root/vps/
+mkdir /root/izin
+cd /root/izin/
 rm -rf .git
 git init
 touch ip
@@ -254,14 +254,14 @@ echo -e "\E[44;1;39m       Delete User IP VPS Registered      \E[0m"
 echo -e "\033[0;34m------------------------------------------\033[0m"
 echo -e "     No.     USER      EXP DATE    IPVPS"
 echo -e "\033[0;34m------------------------------------------\033[0m"
-grep -E "^### " "/root/ipvps/ipvps" | cut -d ' ' -f 2-5 | nl -s '. '
+grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 2-5 | nl -s '. '
 echo -e "\033[0;34m------------------------------------------\033[0m"
 read -rp " Please Input Number : " nombor 
-client=$(grep -E "^### " "/root/ipvps/ipvps" | cut -d ' ' -f 2 | sed -n "${nombor}"p)
-id=$(grep -E "^### " "/root/ipvps/ipvps" | cut -d ' ' -f 3 | sed -n "${nombor}"p)
-exp=$(grep -E "^### " "/root/ipvps/ipvps" | cut -d ' ' -f 4 | sed -n "${nombor}"p)
-daftar=$(grep -E "^### " "/root/ipvps/ipvps" | cut -d ' ' -f 5 | sed -n "${nombor}"p)
-sed -i '/^### '$client' '$id' '$exp' '$daftar'/d' /root/ipvps/ipvps
+client=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 2 | sed -n "${nombor}"p)
+id=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 3 | sed -n "${nombor}"p)
+exp=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 4 | sed -n "${nombor}"p)
+daftar=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 5 | sed -n "${nombor}"p)
+sed -i '/^### '$client' '$id' '$exp' '$daftar'/d' /root/izin/ip
 git init >/dev/null 2>&1
 git add .
 git commit -m delete
@@ -276,9 +276,9 @@ echo " Ip VPS       : $daftar"
 echo " Order ID     : $id"
 echo " Expired Date : $exp"
 echo " Client Name  : $client"
-rm -rf /root/ipvps
+rm -rf /root/ip
 rm -rf /root/data
-rm -rf /root/ipvps
+rm -rf /root/ip
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu-addip"
 addip
@@ -306,7 +306,7 @@ clear
 echo -e "\033[0;34m------------------------------------------\033[0m"
 echo -e "\E[44;1;39m       Renew User IP VPS Registered       \E[0m"
 echo -e "\033[0;34m------------------------------------------\033[0m"
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/allow/ipvps.conf")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/izin/ip")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo "You have no existing clients!"
@@ -318,7 +318,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/allow/ipvps.conf")
 	echo -e "\033[0;34m------------------------------------------\033[0m"
 	echo " Select IP To Renew"
 	echo -e "\033[0;34m------------------------------------------\033[0m"
- grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2-5 | nl -s '. '
+ grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 2-5 | nl -s '. '
   	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 	echo -e "\033[0;34m------------------------------------------\033[0m"
@@ -328,22 +328,22 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/allow/ipvps.conf")
 		fi
 	done
 read -p "Expired (days): " masaaktif
-user=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
-exp=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
-client=$(grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
+client=$(grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 exp3=$(($exp2 + $masaaktif))
 exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
-sed -i "s/### $user $exp/### $user $exp4/g" /root/allow/ipvps.conf
+sed -i "s/### $user $exp/### $user $exp4/g" /root/izin/ip
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/DryanZ/allow.git
-git push -f https://${tokengit}@github.com/DryanZ/allow.git
-echo -e "IPVPS Registration Completed"
+git remote add origin https://github.com/Scvpsss/izin.git
+git push -f https://${tokengit}@github.com/Scvps/izin.git
+echo -e "IP Registration Completed"
   clear
 echo -e "\033[0;34m------------------------------------------\033[0m"
 echo -e "\E[44;1;39m     Client IP VPS Renew Successfully     \E[0m"
@@ -354,9 +354,9 @@ echo "  Renew Date    : $now"
 echo "  Expired Date  : $exp4"
 echo "  Client Name   : $client"
 echo -e "\033[0;34m------------------------------------------\033[0m"
-rm -rf /root/allow
+rm -rf /root/izin
 rm -rf /root/data
-rm -rf /root/ipvps.conf
+rm -rf /root/ip
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu-addip"
 addip
@@ -370,16 +370,16 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
+rm -rf /root/izin
 rm -rf /root/data
-rm -rf /root/ipvps.conf
-git config --global user.email "almonika.cindy@outlook.com"
-git config --global user.name "DryanZ"
-git clone https://github.com/DryanZ/allow.git
-cd /root/allow/
+rm -rf /root/ip
+git config --global user.email "sandiprayoga6666444@gmail.com"
+git config --global user.name "Scvpsss"
+git clone https://github.com/Scvpsss/izin.git
+cd /root/izin/
 rm -rf .git
 git init
-touch ipvps.conf
+touch ip
 echo -e "[ ${Lyellow}INFO${NC} ] Checking list.."
 clear
 echo -e "\033[0;34m------------------------------------------\033[0m"
@@ -388,11 +388,11 @@ echo -e "\033[0;34m------------------------------------------\033[0m"
 ### USER  ID  VALIDITY  IPVPS
 echo -e "    No.   CLIENT NAME   EXP DATE   IPVPS"
 echo -e "\033[0;34m------------------------------------------\033[0m"
-grep -E "^### " "/root/allow/ipvps.conf" | cut -d ' ' -f 2-5 | awk '{print $4,$3,$1}' | nl -s '. ' 
+grep -E "^### " "/root/izin/ip" | cut -d ' ' -f 2-5 | awk '{print $4,$3,$1}' | nl -s '. ' 
 echo -e "\033[0;34m------------------------------------------\033[0m"
-rm -rf /root/allow
+rm -rf /root/izin
 rm -rf /root/data
-rm -rf /root/ipvps.conf
+rm -rf /root/ip
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu-addip"
 addip
