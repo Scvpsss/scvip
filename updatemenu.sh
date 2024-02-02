@@ -20,6 +20,7 @@ wget -O menu-trgo "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/men
 wget -O menu-trojan "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-trojan.sh"
 wget -O menu-trial "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-trial.sh"
 wget -O menu-ssh "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-ssh.sh"
+wget -O addip "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/addip.sh"
 wget -O usernew "https://raw.githubusercontent.com/Scvpsss/scvip/main/ssh/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/Scvpsss/scvip/main/ssh/trial.sh"
 wget -O renew "https://raw.githubusercontent.com/Scvpsss/scvip/main/ssh/renew.sh"
