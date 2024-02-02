@@ -260,9 +260,9 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
 clear 
-figlet 'KONTOL VPN' | lolcat
+figlet 'DANS VPN' | lolcat
 echo -e "  ${z}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "  ${z}|\033[41m   ⇱ INFORMATIONS VPS By : LIGHTSTORE⇲      ${NC}${z}|${NC}"
+echo -e "  ${z}|\033[41m   ⇱ INFORMATIONS VPS By : DANS⇲            ${NC}${z}|${NC}"
 echo -e "  ${z}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
 echo -e "  ${z}|${r}⇲ ${NC}${z}SYSTEM OS     ${NC}: $MODEL"
 echo -e "  ${z}|${r}⇲ ${NC}${z}ISP           ${NC}: $ISP"
@@ -279,8 +279,8 @@ echo -e "   ${z}┗━━━━━━━━━━━━━━━━━━━━�
 echo -e "  ${IWhite} SSH ${NC}: $ressh"" ${IWhite} NGINX ${NC}: $resngx"" ${IWhite}  XRAY ${NC}: $resv2r"" ${IWhite} TROJAN ${NC}: $resv2r"
 echo -e "${IWhite}     STUNNEL ${NC}: $resst" "${IWhite} DROPBEAR ${NC}: $resdbr" "${IWhite} SSH-WS ${NC}: ${green}ON"
 echo -e "  ${z}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "  ${z}│ [${r}01${NC}] ${z}SSH    MENU  ${NC}       ""[${r}07${NC}] ${z}STATUS RUNNING     ${NC}"${z}│
-echo -e "  ${z}│ [${r}02${NC}] ${z}VMESS  MENU  ${NC}       ""[${r}08${NC}] ${z}CHANGE BANNER      ${NC}"
+echo -e "  ${z}│ [${r}01${NC}] ${z}SSH    MENU  ${NC}       ""[${r}07${NC}] ${z}STATUS RUNNING     ${NC}"
+echo -e "  ${z}│ [${r}02${NC}] ${z}VMESS  MENU  ${NC}       ""[${r}08${NC}] ${z}CHANGE BANNER      ${NC}"${z}│
 echo -e "  ${z}│ [${r}03${NC}] ${z}VLESS  MENU  ${NC}       ""[${r}09${NC}] ${z}BACKUP & RESTORE   ${NC}"
 echo -e "  ${z}│ [${r}04${NC}] ${z}TROJAN MENU  ${NC}       ""[${r}10${NC}] ${z}INSTALL UDP        ${NC}"
 echo -e "  ${z}│ [${r}05${NC}] ${z}SETING MENU  ${NC}       ""[${r}11${NC}] ${z}ADD DOMAIN         ${NC}"        
