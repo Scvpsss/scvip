@@ -133,7 +133,7 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/allow
+rm -rf /root/izin
 read -p "IP VPS      : " daftar
 echo -e "[ ${Lyellow}INFO${NC} ] Checking the IPVPS if Already Registered"
 sleep 1
@@ -220,7 +220,7 @@ echo -e "\033[0;34m------------------------------------------\033[0m"
 echo "  Siapkan Email Cloudflare Untuk Cert Xray  "
 echo "  Pastikan Domain Dah Siap Pointing Di Cloudflare Sebelum Install  "
 echo -e "\033[0;34m------------------------------------------\033[0m"
-rm -rf /root/izin
+rm -rf /root/ip
 rm -rf /root/data
 rm -rf /root/ip
 echo ""
@@ -236,7 +236,7 @@ clear
 exit 0
 fi
 clear
-rm -rf /root/izin
+rm -rf /root/ip
 rm -rf /root/data
 rm -rf /root/ip
 git config --global user.email "sandiprayoga6666444@gmail.com"
@@ -354,7 +354,7 @@ echo "  Renew Date    : $now"
 echo "  Expired Date  : $exp4"
 echo "  Client Name   : $client"
 echo -e "\033[0;34m------------------------------------------\033[0m"
-rm -rf /root/izin
+rm -rf /root/ip
 rm -rf /root/data
 rm -rf /root/ip
 echo ""
