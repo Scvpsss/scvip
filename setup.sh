@@ -216,7 +216,7 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Scvpsss/scvip/main/m
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-vmess.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-vless.sh"
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/running.sh"
-wget -q -O /usr/bin/iddip "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/addip.sh"
+wget -q -O /usr/bin/addip "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/addip.sh"
 wget -q -O /usr/bin/clearcache "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/clearcache.sh"
 wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-trgo.sh"
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Scvpsss/scvip/main/menu/menu-trojan.sh"
