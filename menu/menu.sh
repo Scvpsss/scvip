@@ -312,5 +312,5 @@ case $opt in
 11) clear ; add-host ;; 
 12) exit ;;
 13) clear ; addip ;;
-14) clear ; setup_bot ;;
+14) clear ; bot ;;
 esac
