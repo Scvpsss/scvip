@@ -285,6 +285,7 @@ chmod +x /usr/bin/menu
 chmod +x /usr/bin/menu-vmess
 chmod +x /usr/bin/menu-vless
 chmod +x /usr/bin/running
+chmod +x /usr/bin/addip
 chmod +x /usr/bin/clearcache
 chmod +x /usr/bin/menu-trgo
 chmod +x /usr/bin/menu-trojan
